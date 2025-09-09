@@ -2,8 +2,8 @@ import streamlit as st
 from PIL import Image
 import requests
 
-# URL = "https://imageapi-646220559180.europe-west1.run.app"
-URL = "http://localhost:8000"
+URL = "https://imageapi-646220559180.europe-west1.run.app"
+# URL = "http://localhost:8000"
 if st.button("![cliccami](https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png)"):
     st.write("Why you clicked me??")
 
