@@ -11,6 +11,7 @@ if st.button("![cliccami](https://upload.wikimedia.org/wikipedia/commons/8/89/HD
 
 img_file_buffer = st.file_uploader('Upload an image')
 
+print(URL)
 if img_file_buffer is not None:
 
   col1, col2 = st.columns(2)
@@ -25,7 +26,7 @@ if img_file_buffer is not None:
       img_bytes = img_file_buffer.getvalue()
 
       ### Make request to  API (stream=True to stream response as bytes)
-      res = requests.post(URL + "/upload_image", files={'file': img_bytes})
+      res = requests.post(URL + "/upload_image/", files={'file': img_bytes})
 
       if res.status_code == 200:
         ### Display the image returned by the API
