@@ -38,13 +38,24 @@ except Exception as e:
     st.error(f"Could not load CSV at '{CSV_PATH}'.\n{e}")
     st.stop()
 
+lat_col = "lat" if "lat" in df.columns else None
+lon_col = "lon" if "lon" in df.columns else None
+name_col = "common_name" if "common_name" in df.columns else None
+
+if not (lat_col and lon_col and name_col):
+    st.warning("CSV is missing lat/lon/common_name columns, skipping map.")
+    st.stop()
+
+df[lat_col] = pd.to_numeric(df[lat_col], errors="coerce")
+df[lon_col] = pd.to_numeric(df[lon_col], errors="coerce")
+
 # ********** FILTER & IMAGE LINKS **********
 keep = list(SPECIES_IMG.keys())
-df = df[df["common_name"].isin(keep)].dropna(subset=["lat", "lon"]).copy()
-df["img_url"] = df["common_name"].map(SPECIES_IMG)
+df = df[df[name_col].isin(keep)].dropna(subset=[lat_col, lon_col]).copy()
+df["img_url"] = df[name_col].map(SPECIES_IMG)
 
 if df.empty:
-    st.warning("No rows after filtering, check columns common_name, lat, lon.")
+    st.warning("No valid rows left after filtering.")
     st.stop()
 
 # ********** MAP **********
