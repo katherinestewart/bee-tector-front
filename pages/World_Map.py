@@ -128,7 +128,7 @@ df_all = load_csv(CSV_PATH)
 
 df_all[lat_col] = pd.to_numeric(df_all[lat_col], errors="coerce")
 df_all[lon_col] = pd.to_numeric(df_all[lon_col], errors="coerce")
-df2 = df_all.dropna(subset=[lat_col, lon_col]).copy()
+df2 = df_all.dropna(subset=[lat_col, lon_col, name_col]).copy()
 df2 = df2[df2[name_col].str.strip().str.lower() != "bumble bees"]
 
 view_state2 = pdk.ViewState(
