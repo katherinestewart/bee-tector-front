@@ -1,86 +1,43 @@
 import os
-import base64
 import streamlit as st
-from pathlib import Path
 from PIL import Image
 import requests
 import pycountry
 
+
 # API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
 API_URL = "http://localhost:8000"
 
-# Hide header
-st.markdown(
-    """
-    <style>
-    header {visibility: hidden;}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Sidebar
-st.markdown(
-    """
-    <style>
-    /* Sidebar background */
-    section[data-testid="stSidebar"] {
-        background-color: black;
-    }
-
-    /* Sidebar text */
-    section[data-testid="stSidebar"] * {
-        color: white !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Background image
-BG_PATH = Path("assets/0005.jpg")
-def get_base64(file_path):
-    return base64.b64encode(open(file_path, "rb").read()).decode()
-
-if BG_PATH.exists():
-    b64 = get_base64(BG_PATH)
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.8)),
-                        url("data:image/png;base64,{b64}");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }}
-
-        /* keep widgets flat (no extra boxes) */
-        [data-testid="stFileUploader"] [data-testid="stFileUploadDropzone"],
-        [data-testid="stFileUploader"] > div:first-child {{
-            background: transparent !important;
-            border: 1px dashed #aaa !important;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-
 st.set_page_config(page_title="Detect a Bee", layout="wide")
 
-# st.title("BeeTector")
+st.markdown("""
+    <div style="text-align:center;">
+      <img src="assets/logofinal.png" width="content">
+    </div>
+    """, unsafe_allow_html=True)
 
-ROOT = Path(__file__).resolve().parent
-IMG = ROOT / "assets" / "logohd.png"
 
-st.image(str(IMG), width=300)
+def prettify_name(name: str) -> str:
+    if not name:
+        return name
+    return name.replace("_", " ").strip()
+
+countries = list(pycountry.countries)
+name_to_code = {c.name: c.alpha_2 for c in countries}
+
+country_names_sorted = sorted(name_to_code.keys(), key=lambda s: s.lower())
 
 
-st.markdown('<div class="bee-sentinel"></div>', unsafe_allow_html=True)
+placeholder_option = "(optional)"
+options = [placeholder_option] + country_names_sorted
 
-country_codes = [c.alpha_2 for c in pycountry.countries]
-selected_country = st.selectbox("Select a country (optional)", [""] + country_codes)
+
+selected_country_name = st.selectbox("Select a country", options, index=0, key="country_select")
+
+
+country_chosen = (selected_country_name != placeholder_option)
+
+selected_country_for_api = name_to_code.get(selected_country_name, "") if country_chosen else ""
 
 img_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
@@ -88,7 +45,7 @@ if st.button("Predict") and img_file:
     st.image(Image.open(img_file), caption="Uploaded Image", use_container_width=True)
 
     files = {"files": (img_file.name, img_file.getvalue(), img_file.type or "image/jpeg")}
-    data = {"data": selected_country} if selected_country else {}
+    data = {"data": selected_country_for_api} if selected_country_for_api else {}
 
     with st.spinner("Bee patient..."):
         try:
@@ -97,71 +54,113 @@ if st.button("Predict") and img_file:
         except requests.exceptions.RequestException as e:
             st.error(f"Request failed: {e}")
         else:
-
             try:
                 result = res.json()
             except Exception:
                 st.error("API returned invalid JSON.")
                 result = {}
 
-            st.subheader("Prediction Result")
+            st.subheader("Bee-tection Result")
+
 
             stage = result.get("stage")
             bee_prob = result.get("bumblebee_prob", 0.0)
-            st.write(f"**Stage:** {stage}")
-            st.progress(bee_prob)
-
-            if stage in ["subspecies_high_conf", "subspecies_low_conf"]:
-                prediction = result.get("prediction", {}) or {}
-                class_name = prediction.get("class_name", "Unknown")
-                prob = prediction.get("prob", 0.0)
 
 
-                if selected_country:
-                    context_species = result.get("context_species_in_country", []) or []
+            prediction = result.get("prediction", {}) or {}
+            class_name_raw = (prediction.get("class_name") or "").strip()
+            prob = prediction.get("prob", 0.0)
 
 
-                    known_names = {
-                        (s.get("class_name") or "").strip().lower()
-                        for s in context_species
-                        if s.get("class_name")
-                    }
+            class_name = prettify_name(class_name_raw)
 
-                    if class_name and class_name.strip().lower() in known_names:
 
-                        st.write(f"**This is your subspecies:** {class_name}")
+            context_species = result.get("context_species_in_country", []) or []
+            known_names = {
+                (s.get("class_name") or "").strip().lower()
+                for s in context_species
+                if s.get("class_name")
+            }
+
+
+            if stage == "no_bumblebee_detected":
+                st.write("We didn't detect any bumblebee in this picture")
+                try:
+                    st.progress(bee_prob)
+                except Exception:
+                    pass
+
+
+                if country_chosen and context_species:
+                    st.markdown("**Here are some common subspecies in your country:**")
+                    for s in context_species:
+                        classn_raw = s.get("class_name") or "Unknown"
+                        classn = prettify_name(classn_raw)
+                        commonn = s.get("common_name")
+                        if commonn:
+                            st.write(f"- {classn} ({commonn})")
+                        else:
+                            st.write(f"- {classn}")
+
+            else:
+
+                high_conf_and_present = (
+                    stage == "subspecies_high_conf" and
+                    (not country_chosen or (class_name_raw and class_name_raw.lower() in known_names))
+                )
+
+                if high_conf_and_present:
+                    st.write("We found your bumblebee!")
+                    if class_name:
+                        st.write(f"**Subspecies:** {class_name}")
                         st.write(f"**Confidence:** {prob:.2%}")
-                        st.progress(prob)
+                        try:
+                            st.progress(prob)
+                        except Exception:
+                            pass
 
-                        matched_lower = class_name.strip().lower()
+
+                    if country_chosen:
+
+                        matched_lower = (class_name_raw or "").strip().lower()
                         other_species = [
                             s for s in context_species
                             if (s.get("class_name") or "").strip().lower() != matched_lower
                         ]
-
+                        st.markdown("**Here are some other common subspecies in your country:**")
                         if other_species:
-                            st.write("**These are other subspecies in your area:**")
                             for s in other_species:
-                                st.write(f"- {s.get('class_name')} ({s.get('common_name')})")
+                                classn_raw = s.get("class_name") or "Unknown"
+                                classn = prettify_name(classn_raw)
+                                commonn = s.get("common_name")
+                                if commonn:
+                                    st.write(f"- {classn} ({commonn})")
+                                else:
+                                    st.write(f"- {classn}")
                         else:
                             st.write("_No other known subspecies are listed for the selected country._")
-                    else:
 
-                        st.write("**Unable to identify this subspecies, here is the most common one in your area:**")
-                        if context_species:
-                            for s in context_species:
-                                st.write(f"- {s.get('class_name')} ({s.get('common_name')})")
-                        else:
-                            st.write("_No known subspecies are listed for the selected country._")
+
+                elif stage in ["subspecies_low_conf", "subspecies_high_conf"]:
+
+                    st.write("This is a bumblebee, but not a subspecies our model can detect.")
+
+
                 else:
+                    st.write(stage or "Unknown stage")
+                    try:
+                        st.progress(bee_prob)
+                    except Exception:
+                        pass
 
-                    st.write(f"**Subspecies:** {class_name}")
-                    st.write(f"**Confidence:** {prob:.2%}")
-                    st.progress(prob)
-
-            context_species = result.get("context_species_in_country", [])
-            if context_species and not (stage in ["subspecies_high_conf", "subspecies_low_conf"] and selected_country):
-
-                st.write("**Known subspecies in selected country:**")
-                for s in context_species:
-                    st.write(f"- {s.get('class_name')} ({s.get('common_name')})")
+               
+                if country_chosen and context_species and not high_conf_and_present:
+                    st.markdown("**Here are some common subspecies in your country:**")
+                    for s in context_species:
+                        classn_raw = s.get("class_name") or "Unknown"
+                        classn = prettify_name(classn_raw)
+                        commonn = s.get("common_name")
+                        if commonn:
+                            st.write(f"- {classn} ({commonn})")
+                        else:
+                            st.write(f"- {classn}")
