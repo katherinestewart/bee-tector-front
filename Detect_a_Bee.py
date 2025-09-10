@@ -4,17 +4,22 @@ from PIL import Image
 import requests
 import pycountry
 
+from pathlib import Path
+import pycountry
+from utils.ui import apply_global_css
 
 # API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
 API_URL = "http://localhost:8000"
 
-st.set_page_config(page_title="Detect a Bee", layout="wide")
+st.set_page_config(page_title="Detect a Bee", layout="wide", initial_sidebar_state="expanded")
 
-st.markdown("""
-    <div style="text-align:center;">
-      <img src="assets/logofinal.png" width="content">
-    </div>
-    """, unsafe_allow_html=True)
+BG = Path.cwd() / "assets" / "0005.jpg"
+apply_global_css(BG)
+
+ROOT = Path(__file__).resolve().parent
+IMG = ROOT / "assets" / "logohd.png"
+
+st.image(str(IMG), width=300)
 
 
 def prettify_name(name: str) -> str:
@@ -41,7 +46,7 @@ selected_country_for_api = name_to_code.get(selected_country_name, "") if countr
 
 img_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
-if st.button("Predict") and img_file:
+if st.button("Detect this bee") and img_file:
     st.image(Image.open(img_file), caption="Uploaded Image", use_container_width=True)
 
     files = {"files": (img_file.name, img_file.getvalue(), img_file.type or "image/jpeg")}
@@ -84,7 +89,7 @@ if st.button("Predict") and img_file:
 
 
             if stage == "no_bumblebee_detected":
-                st.write("We didn't detect any bumblebee in this picture")
+                st.write("We didn't detect a bumblebee in this picture")
                 try:
                     st.progress(bee_prob)
                 except Exception:
@@ -153,7 +158,7 @@ if st.button("Predict") and img_file:
                     except Exception:
                         pass
 
-               
+
                 if country_chosen and context_species and not high_conf_and_present:
                     st.markdown("**Here are some common subspecies in your country:**")
                     for s in context_species:
