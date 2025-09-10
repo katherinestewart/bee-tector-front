@@ -4,9 +4,18 @@ from PIL import Image
 import requests
 import pycountry
 
-API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
-# API_URL = "http://localhost:8000"
-st.title("BeeTector")
+# API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
+API_URL = "http://localhost:8000"
+
+st.set_page_config(page_title="Detect a Bee", layout="wide")
+
+# st.title("BeeTector")
+
+st.markdown("""
+            <div style="text-align:center;">
+              <img src="assets/logofinal.png" width="content">
+            </div>
+            """, unsafe_allow_html=True)
 
 country_codes = [c.alpha_2 for c in pycountry.countries]
 selected_country = st.selectbox("Select a country (optional)", [""] + country_codes)
