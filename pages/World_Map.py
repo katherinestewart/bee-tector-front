@@ -69,12 +69,12 @@ layer = pdk.Layer(
     "ScatterplotLayer",
     data=df,
     get_position="[lon, lat]",
-    get_fill_color="color",     # per-species color if you add it
+    get_fill_color="color",
     get_line_color=[255, 255, 255, 220],
     stroked=True,
     line_width_min_pixels=1,
-    get_radius=6,               # size in pixels
-    radius_units="pixels",      # 👈 force equal size everywhere
+    get_radius=6,
+    radius_units="pixels",
     pickable=True,
 )
 
