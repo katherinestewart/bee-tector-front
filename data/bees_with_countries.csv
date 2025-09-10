@@ -1,0 +1,459 @@
+class_name,common_name,scientific_name,country,country_code
+Alpine_Bumble_Bee,Alpine Bumble Bee,Bombus alpinus,Sweden,SE
+Amazonian_Bumble_Bee,Amazonian Bumble Bee,Bombus transversalis,Peru,PE
+American_Bumble_Bee,American Bumble Bee,Bombus pensylvanicus,United States,US
+American_Bumble_Bee,American Bumble Bee,Bombus pensylvanicus,Canada,CA
+Andean_Red_Bumble_Bee,Andean Red Bumble Bee,Bombus rubicundus,Colombia,CO
+Ashton's_Cuckoo_Bumble_Bee,Ashton's Cuckoo Bumble Bee,Bombus ashtoni,Canada,CA
+Barbut's_Cuckoo_Bumble_bee,Barbut's Cuckoo Bumble bee,Bombus barbutellus,Switzerland,CH
+Barbut's_Cuckoo_Bumble_bee,Barbut's Cuckoo Bumble bee,Bombus barbutellus,Czechia,CZ
+Barbut's_Cuckoo_Bumble_bee,Barbut's Cuckoo Bumble bee,Bombus barbutellus,Portugal,PT
+Barbut's_Cuckoo_Bumble_bee,Barbut's Cuckoo Bumble bee,Bombus barbutellus,United Kingdom,GB
+Black-and-gold_Bumble_Bee,Black-and-gold Bumble Bee,Bombus auricomus,United States,US
+Black-backed_Bumble_Bee,Black-backed Bumble Bee,Bombus mesomelas,France,FR
+Black-backed_Bumble_Bee,Black-backed Bumble Bee,Bombus mesomelas,Austria,AT
+Black-sided_Bumble_Bee,Black-sided Bumble Bee,Bombus atripes,China,CN
+Black-tailed_Bumble_Bee,Black-tailed Bumble Bee,Bombus melanopygus,United States,US
+Black-tailed_Bumble_Bee,Black-tailed Bumble Bee,Bombus melanopygus,Canada,CA
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Sweden,SE
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Austria,AT
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Denmark,DK
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Spain,ES
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,United Kingdom,GB
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Germany,DE
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Poland,PL
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Czechia,CZ
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Ukraine,UA
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Russian Federation,RU
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Finland,FI
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,Lithuania,LT
+Bohemian_Cuckoo_Bumble_bee,Bohemian Cuckoo Bumble bee,Bombus bohemicus,France,FR
+Bolster's_Bumble_Bee,Bolster's Bumble Bee,Bombus vagans bolsteri,Canada,CA
+British_Buff-tailed_Bumblebee,British Buff-tailed Bumblebee,Bombus terrestris audax,United Kingdom,GB
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,Italy,IT
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,Sweden,SE
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,Romania,RO
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,Norway,NO
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,Austria,AT
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,France,FR
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,Lithuania,LT
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,Russian Federation,RU
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,Germany,DE
+Broken-belted_Bumble_Bee,Broken-belted Bumble Bee,Bombus soroeensis,Finland,FI
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,United Kingdom,GB
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,Finland,FI
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,France,FR
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,Croatia,HR
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,Denmark,DK
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,Lithuania,LT
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,Germany,DE
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,Russian Federation,RU
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,Romania,RO
+Brown-banded_Carder-Bumble_bee,Brown-banded Carder-Bumble bee,Bombus humilis,Austria,AT
+Brown-belted_Bumble_Bee,Brown-belted Bumble Bee,Bombus griseocollis,United States,US
+Brown-belted_Bumble_Bee,Brown-belted Bumble Bee,Bombus griseocollis,Canada,CA
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Norway,NO
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Georgia,GE
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Luxembourg,LU
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Finland,FI
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,France,FR
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,New Zealand,NZ
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Spain,ES
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Ukraine,UA
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Italy,IT
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Switzerland,CH
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Türkiye,TR
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Netherlands,NL
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Croatia,HR
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Czechia,CZ
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Germany,DE
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Cyprus,CY
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,United Kingdom,GB
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Belgium,BE
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Denmark,DK
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Hungary,HU
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Sweden,SE
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Serbia,RS
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Austria,AT
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Lithuania,LT
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Romania,RO
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Russian Federation,RU
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Poland,PL
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Portugal,PT
+Buff-tailed_Bumble_Bee,Buff-tailed Bumble Bee,Bombus terrestris,Kazakhstan,KZ
+California_Bumble_Bee,California Bumble Bee,Bombus californicus,Canada,CA
+California_Bumble_Bee,California Bumble Bee,Bombus californicus,United States,US
+Canary_Islands_Bumble_Bee,Canary Islands Bumble Bee,Bombus terrestris canariensis,Spain,ES
+Clay_Bumble_Bee,Clay Bumble Bee,Bombus argillaceus,Croatia,HR
+Clay_Bumble_Bee,Clay Bumble Bee,Bombus argillaceus,Romania,RO
+Clay_Bumble_Bee,Clay Bumble Bee,Bombus argillaceus,Italy,IT
+Colorado_Black-notched_Bumble_Bee,Colorado Black-notched Bumble Bee,Bombus bifarius,United States,US
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Bosnia and Herzegovina,BA
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Ireland,IE
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Lithuania,LT
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Russian Federation,RU
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Romania,RO
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Czechia,CZ
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,United Kingdom,GB
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Denmark,DK
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Luxembourg,LU
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Sweden,SE
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Finland,FI
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Norway,NO
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Portugal,PT
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Spain,ES
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Türkiye,TR
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Austria,AT
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Poland,PL
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Estonia,EE
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Kazakhstan,KZ
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Switzerland,CH
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Italy,IT
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Netherlands,NL
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,France,FR
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Germany,DE
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Belgium,BE
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Ukraine,UA
+Common_Carder_Bumble_Bee,Common Carder Bumble Bee,Bombus pascuorum,Croatia,HR
+Common_Eastern_Bumble_Bee,Common Eastern Bumble Bee,Bombus impatiens,Canada,CA
+Common_Eastern_Bumble_Bee,Common Eastern Bumble Bee,Bombus impatiens,United States,US
+Cousinly_Bumble_Bee,Cousinly Bumble Bee,Bombus consobrinus,Russian Federation,RU
+Crotch's_Bumble_Bee,Crotch's Bumble Bee,Bombus crotchii,United States,US
+Cryptic_Bumble_Bee,Cryptic Bumble Bee,Bombus cryptarum,Belarus,BY
+Cryptic_Bumble_Bee,Cryptic Bumble Bee,Bombus cryptarum,Germany,DE
+Cryptic_Bumble_Bee,Cryptic Bumble Bee,Bombus cryptarum,United States,US
+Cryptic_Bumble_Bee,Cryptic Bumble Bee,Bombus cryptarum,Russian Federation,RU
+Cryptic_Bumble_Bee,Cryptic Bumble Bee,Bombus cryptarum,Canada,CA
+Cryptic_Bumble_Bee,Cryptic Bumble Bee,Bombus cryptarum,United Kingdom,GB
+Cullum's_Bumble_Bee,Cullum's Bumble Bee,Bombus cullumanus,Russian Federation,RU
+Diverse_Bumble_Bee,Diverse Bumble Bee,Bombus diversus,Japan,JP
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Denmark,DK
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Czechia,CZ
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Luxembourg,LU
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Finland,FI
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Russian Federation,RU
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Italy,IT
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Croatia,HR
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Austria,AT
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,France,FR
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Lithuania,LT
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Switzerland,CH
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Norway,NO
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Spain,ES
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Germany,DE
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Iceland,IS
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Poland,PL
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,United Kingdom,GB
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Sweden,SE
+Early_Bumble_Bee,Early Bumble Bee,Bombus pratorum,Ukraine,UA
+Far_Eastern_Bumble_Bee,Far Eastern Bumble Bee,Bombus patagiatus,Russian Federation,RU
+Far_Eastern_Bumble_Bee,Far Eastern Bumble Bee,Bombus patagiatus,China,CN
+Field_Cuckoo_Bumble_bee,Field Cuckoo Bumble bee,Bombus campestris,Germany,DE
+Field_Cuckoo_Bumble_bee,Field Cuckoo Bumble bee,Bombus campestris,Norway,NO
+Field_Cuckoo_Bumble_bee,Field Cuckoo Bumble bee,Bombus campestris,United Kingdom,GB
+Field_Cuckoo_Bumble_bee,Field Cuckoo Bumble bee,Bombus campestris,Russian Federation,RU
+Field_Cuckoo_Bumble_bee,Field Cuckoo Bumble bee,Bombus campestris,Finland,FI
+Field_Cuckoo_Bumble_bee,Field Cuckoo Bumble bee,Bombus campestris,Netherlands,NL
+Field_Cuckoo_Bumble_bee,Field Cuckoo Bumble bee,Bombus campestris,Luxembourg,LU
+Field_Cuckoo_Bumble_bee,Field Cuckoo Bumble bee,Bombus campestris,Italy,IT
+Field_Cuckoo_Bumble_bee,Field Cuckoo Bumble bee,Bombus campestris,Denmark,DK
+Fire-tailed_Bumble_Bee,Fire-tailed Bumble Bee,Bombus ardens,Japan,JP
+Fire-tailed_Bumble_Bee,Fire-tailed Bumble Bee,Bombus ardens,"Korea, Republic of",KR
+Flavescent_Bumble_Bee,Flavescent Bumble Bee,Bombus flavescens,Thailand,TH
+Fog-belt_Bumble_Bee,Fog-belt Bumble Bee,Bombus caliginosus,United States,US
+Forest_Bumble_Bee,Forest Bumble Bee,Bombus sylvicola,Canada,CA
+Forest_Bumble_Bee,Forest Bumble Bee,Bombus sylvicola,United States,US
+Forest_Cuckoo_Bumble_bee,Forest Cuckoo Bumble bee,Bombus sylvestris,Luxembourg,LU
+Forest_Cuckoo_Bumble_bee,Forest Cuckoo Bumble bee,Bombus sylvestris,Czechia,CZ
+Forest_Cuckoo_Bumble_bee,Forest Cuckoo Bumble bee,Bombus sylvestris,Austria,AT
+Forest_Cuckoo_Bumble_bee,Forest Cuckoo Bumble bee,Bombus sylvestris,Germany,DE
+Forest_Cuckoo_Bumble_bee,Forest Cuckoo Bumble bee,Bombus sylvestris,United Kingdom,GB
+Forest_Cuckoo_Bumble_bee,Forest Cuckoo Bumble bee,Bombus sylvestris,Romania,RO
+Forest_Cuckoo_Bumble_bee,Forest Cuckoo Bumble bee,Bombus sylvestris,Lithuania,LT
+Forest_Cuckoo_Bumble_bee,Forest Cuckoo Bumble bee,Bombus sylvestris,Russian Federation,RU
+Fuzzy-Horned_Bumble_Bee,Fuzzy-Horned Bumble Bee,Bombus mixtus,Canada,CA
+Fuzzy-Horned_Bumble_Bee,Fuzzy-Horned Bumble Bee,Bombus mixtus,United States,US
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Poland,PL
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Luxembourg,LU
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Guernsey,GG
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Lithuania,LT
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Sweden,SE
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Norway,NO
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Slovenia,SI
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Czechia,CZ
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Russian Federation,RU
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,United Kingdom,GB
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Ukraine,UA
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Germany,DE
+Garden_Bumble_Bee,Garden Bumble Bee,Bombus hortorum,Austria,AT
+Golden_Northern_Bumble_Bee,Golden Northern Bumble Bee,Bombus fervidus,Canada,CA
+Golden_Northern_Bumble_Bee,Golden Northern Bumble Bee,Bombus fervidus,United States,US
+Golden-belted_Bumble_Bee,Golden-belted Bumble Bee,Bombus kirbiellus,United States,US
+Golden-belted_Bumble_Bee,Golden-belted Bumble Bee,Bombus kirbiellus,Canada,CA
+Gray-backed_Bumble_Bee,Gray-backed Bumble Bee,Bombus funebris,"Bolivia, Plurinational State of",BO
+Gray-backed_Bumble_Bee,Gray-backed Bumble Bee,Bombus funebris,Ecuador,EC
+Gray-backed_Bumble_Bee,Gray-backed Bumble Bee,Bombus funebris,Peru,PE
+Great_Basin_Bumble_Bee,Great Basin Bumble Bee,Bombus centralis,United States,US
+Great_Basin_Bumble_Bee,Great Basin Bumble Bee,Bombus centralis,Canada,CA
+Great_Yellow_Bumble_Bee,Great Yellow Bumble Bee,Bombus distinguendus,Russian Federation,RU
+Half-black_Bumble_Bee,Half-black Bumble Bee,Bombus vagans,Canada,CA
+Half-black_Bumble_Bee,Half-black Bumble Bee,Bombus vagans,United States,US
+Heath_Bumble_Bee,Heath Bumble Bee,Bombus jonellus,Finland,FI
+Heath_Bumble_Bee,Heath Bumble Bee,Bombus jonellus,Sweden,SE
+Heath_Bumble_Bee,Heath Bumble Bee,Bombus jonellus,United Kingdom,GB
+Heath_Bumble_Bee,Heath Bumble Bee,Bombus jonellus,Greenland,GL
+Heath_Bumble_Bee,Heath Bumble Bee,Bombus jonellus,Austria,AT
+Heath_Bumble_Bee,Heath Bumble Bee,Bombus jonellus,Norway,NO
+Hill_Cuckoo_Bumble_bee,Hill Cuckoo Bumble bee,Bombus rupestris,Czechia,CZ
+Hill_Cuckoo_Bumble_bee,Hill Cuckoo Bumble bee,Bombus rupestris,Slovakia,SK
+Hill_Cuckoo_Bumble_bee,Hill Cuckoo Bumble bee,Bombus rupestris,Austria,AT
+Hill_Cuckoo_Bumble_bee,Hill Cuckoo Bumble bee,Bombus rupestris,United Kingdom,GB
+Hill_Cuckoo_Bumble_bee,Hill Cuckoo Bumble bee,Bombus rupestris,Germany,DE
+Hill_Cuckoo_Bumble_bee,Hill Cuckoo Bumble bee,Bombus rupestris,France,FR
+Hill_Cuckoo_Bumble_bee,Hill Cuckoo Bumble bee,Bombus rupestris,Poland,PL
+Hill_Cuckoo_Bumble_bee,Hill Cuckoo Bumble bee,Bombus rupestris,Russian Federation,RU
+Hill_Cuckoo_Bumble_bee,Hill Cuckoo Bumble bee,Bombus rupestris,Denmark,DK
+Hunt's_Bumble_Bee,Hunt's Bumble Bee,Bombus huntii,United States,US
+Hunt's_Bumble_Bee,Hunt's Bumble Bee,Bombus huntii,Canada,CA
+Indiscriminate_Cuckoo_Bumble_Bee,Indiscriminate Cuckoo Bumble Bee,Bombus insularis,Canada,CA
+Indiscriminate_Cuckoo_Bumble_Bee,Indiscriminate Cuckoo Bumble Bee,Bombus insularis,United States,US
+Jet-tailed_Bumble_Bee,Jet-tailed Bumble Bee,Bombus melanurus,Mongolia,MN
+Lapland_Bumble_Bee,Lapland Bumble Bee,Bombus lapponicus,Finland,FI
+Lapland_Bumble_Bee,Lapland Bumble Bee,Bombus lapponicus,Sweden,SE
+Lapland_Bumble_Bee,Lapland Bumble Bee,Bombus lapponicus,Mongolia,MN
+Large_Garden_Bumble_Bee,Large Garden Bumble Bee,Bombus ruderatus,Portugal,PT
+Large_Garden_Bumble_Bee,Large Garden Bumble Bee,Bombus ruderatus,Spain,ES
+Large_Garden_Bumble_Bee,Large Garden Bumble Bee,Bombus ruderatus,United Kingdom,GB
+Large_Garden_Bumble_Bee,Large Garden Bumble Bee,Bombus ruderatus,Italy,IT
+Large_Garden_Bumble_Bee,Large Garden Bumble Bee,Bombus ruderatus,France,FR
+Lemon_Cuckoo_Bumble_Bee,Lemon Cuckoo Bumble Bee,Bombus citrinus,Canada,CA
+Lemon_Cuckoo_Bumble_Bee,Lemon Cuckoo Bumble Bee,Bombus citrinus,United States,US
+Lucorum-group_Bumble_Bees,Lucorum-group Bumble Bees,Bombus lucorum,Germany,DE
+Lucorum-group_Bumble_Bees,Lucorum-group Bumble Bees,Bombus lucorum,Faroe Islands,FO
+Lucorum-group_Bumble_Bees,Lucorum-group Bumble Bees,Bombus lucorum,Austria,AT
+Lucorum-group_Bumble_Bees,Lucorum-group Bumble Bees,Bombus lucorum,United Kingdom,GB
+Lucorum-group_Bumble_Bees,Lucorum-group Bumble Bees,Bombus lucorum,Russian Federation,RU
+Lucorum-group_Bumble_Bees,Lucorum-group Bumble Bees,Bombus lucorum,Netherlands,NL
+Lucorum-group_Bumble_Bees,Lucorum-group Bumble Bees,Bombus lucorum,Finland,FI
+McKay's_Western_Bumble_Bee,McKay's Western Bumble Bee,Bombus mckayi,United States,US
+McKay's_Western_Bumble_Bee,McKay's Western Bumble Bee,Bombus mckayi,Canada,CA
+Mesoamerican_Bumble_Bee,Mesoamerican Bumble Bee,Bombus ephippiatus,Guatemala,GT
+Mesoamerican_Bumble_Bee,Mesoamerican Bumble Bee,Bombus ephippiatus,Costa Rica,CR
+Mimic_Bumble_Bee,Mimic Bumble Bee,Bombus hypocrita,Japan,JP
+Morrison's_Bumble_Bee,Morrison's Bumble Bee,Bombus morrisoni,United States,US
+Moss_Carder_bee,Moss Carder bee,Bombus muscorum,Ireland,IE
+Moss_Carder_bee,Moss Carder bee,Bombus muscorum,Portugal,PT
+Moss_Carder_bee,Moss Carder bee,Bombus muscorum,United Kingdom,GB
+Moss_Carder_bee,Moss Carder bee,Bombus muscorum,Norway,NO
+Mountain_Bumble_Bee,Mountain Bumble Bee,Bombus monticola,United Kingdom,GB
+Mountain_Bumble_Bee,Mountain Bumble Bee,Bombus monticola,Spain,ES
+Mountain_Bumble_Bee,Mountain Bumble Bee,Bombus monticola,Germany,DE
+Mountain_Bumble_Bee,Mountain Bumble Bee,Bombus monticola,Austria,AT
+Mountain_Bumble_Bee,Mountain Bumble Bee,Bombus monticola,Norway,NO
+Mountain_Bumble_Bee,Mountain Bumble Bee,Bombus monticola,Sweden,SE
+Mountain_Bumble_Bee,Mountain Bumble Bee,Bombus monticola,France,FR
+Mountain_Bumble_Bee,Mountain Bumble Bee,Bombus monticola,Finland,FI
+Nearctic_Bumble_Bee,Nearctic Bumble Bee,Bombus vancouverensis nearcticus,United States,US
+Nearctic_Bumble_Bee,Nearctic Bumble Bee,Bombus vancouverensis nearcticus,Canada,CA
+Nevada_Bumble_Bee,Nevada Bumble Bee,Bombus nevadensis,Canada,CA
+Nevada_Bumble_Bee,Nevada Bumble Bee,Bombus nevadensis,United States,US
+Northern_Amber_Bumble_Bee,Northern Amber Bumble Bee,Bombus borealis,United States,US
+Northern_Amber_Bumble_Bee,Northern Amber Bumble Bee,Bombus borealis,Canada,CA
+Norwegian_Cuckoo_Bumble_bee,Norwegian Cuckoo Bumble bee,Bombus norvegicus,Russian Federation,RU
+Orange-legged_Bumble_Bee,Orange-legged Bumble Bee,Bombus eximius,Thailand,TH
+Paulista_Bumble_Bee,Paulista Bumble Bee,Bombus pauloensis,Uruguay,UY
+Perplexing_Bumble_Bee,Perplexing Bumble Bee,Bombus perplexus,United States,US
+Perplexing_Bumble_Bee,Perplexing Bumble Bee,Bombus perplexus,Canada,CA
+Red-belted_Bumble_Bee,Red-belted Bumble Bee,Bombus rufocinctus,United States,US
+Red-belted_Bumble_Bee,Red-belted Bumble Bee,Bombus rufocinctus,Canada,CA
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,Austria,AT
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,Latvia,LV
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,Luxembourg,LU
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,Norway,NO
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,Germany,DE
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,Russian Federation,RU
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,Switzerland,CH
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,Finland,FI
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,Italy,IT
+Red-shanked_Bumble_Bee,Red-shanked Bumble Bee,Bombus ruderarius,United Kingdom,GB
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Poland,PL
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,United Kingdom,GB
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Austria,AT
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Slovakia,SK
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,France,FR
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Belgium,BE
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Russian Federation,RU
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Sweden,SE
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Finland,FI
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Netherlands,NL
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Czechia,CZ
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Spain,ES
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Luxembourg,LU
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Norway,NO
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Switzerland,CH
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Denmark,DK
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Germany,DE
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Ireland,IE
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Italy,IT
+Red-tailed_Bumble_Bee,Red-tailed Bumble Bee,Bombus lapidarius,Romania,RO
+Rusty-patched_Bumble_Bee,Rusty-patched Bumble Bee,Bombus affinis,United States,US
+Sand-coloured_Carder_Bumble_Bee,Sand-coloured Carder Bumble Bee,Bombus veteranus,Russian Federation,RU
+Sand-coloured_Carder_Bumble_Bee,Sand-coloured Carder Bumble Bee,Bombus veteranus,Finland,FI
+Sand-coloured_Carder_Bumble_Bee,Sand-coloured Carder Bumble Bee,Bombus veteranus,Denmark,DK
+Sanderson's_Bumble_Bee,Sanderson's Bumble Bee,Bombus sandersoni,Canada,CA
+Sanderson's_Bumble_Bee,Sanderson's Bumble Bee,Bombus sandersoni,United States,US
+Schrenck's_Bumble_Bee,Schrenck's Bumble Bee,Bombus schrencki,Finland,FI
+Schrenck's_Bumble_Bee,Schrenck's Bumble Bee,Bombus schrencki,Russian Federation,RU
+Semenov's_Bumble_Bee,Semenov's Bumble Bee,Bombus semenoviellus,Russian Federation,RU
+Semenov's_Bumble_Bee,Semenov's Bumble Bee,Bombus semenoviellus,Finland,FI
+Short-faced_Bumble_Bee,Short-faced Bumble Bee,Bombus breviceps,Thailand,TH
+Short-haired_Bumble_Bee,Short-haired Bumble Bee,Bombus subterraneus,Finland,FI
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Czechia,CZ
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Montenegro,ME
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Luxembourg,LU
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Ukraine,UA
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Poland,PL
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Spain,ES
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Finland,FI
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,United Kingdom,GB
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Sweden,SE
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,France,FR
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Austria,AT
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Germany,DE
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Russian Federation,RU
+Shrill_Carder-Bumble_bee,Shrill Carder-Bumble bee,Bombus sylvarum,Armenia,AM
+Sichel's_Bumble_Bee,Sichel's Bumble Bee,Bombus sichelii,Austria,AT
+Sichel's_Bumble_Bee,Sichel's Bumble Bee,Bombus sichelii,Spain,ES
+Sichel's_Bumble_Bee,Sichel's Bumble Bee,Bombus sichelii,France,FR
+Sichel's_Bumble_Bee,Sichel's Bumble Bee,Bombus sichelii,Italy,IT
+Sichel's_Bumble_Bee,Sichel's Bumble Bee,Bombus sichelii,Russian Federation,RU
+Sichel's_Bumble_Bee,Sichel's Bumble Bee,Bombus sichelii,Switzerland,CH
+Sitka_Bumble_Bee,Sitka Bumble Bee,Bombus sitkensis,United States,US
+Sitka_Bumble_Bee,Sitka Bumble Bee,Bombus sitkensis,Canada,CA
+Sonoran_Bumble_Bee,Sonoran Bumble Bee,Bombus sonorus,United States,US
+Sonoran_Bumble_Bee,Sonoran Bumble Bee,Bombus sonorus,Mexico,MX
+Southern_Plains_Bumble_Bee,Southern Plains Bumble Bee,Bombus fraternus,United States,US
+Sporadic_Bumble_Bee,Sporadic Bumble Bee,Bombus sporadicus,Finland,FI
+Sporadic_Bumble_Bee,Sporadic Bumble Bee,Bombus sporadicus,Russian Federation,RU
+Steindachner's_Bumble_Bee,Steindachner's Bumble Bee,Bombus steindachneri,Mexico,MX
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Finland,FI
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,United Kingdom,GB
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Ukraine,UA
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,France,FR
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Russian Federation,RU
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Czechia,CZ
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Netherlands,NL
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Poland,PL
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Ireland,IE
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Slovakia,SK
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Norway,NO
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Sweden,SE
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Germany,DE
+Tree_Bumble_Bee,Tree Bumble Bee,Bombus hypnorum,Austria,AT
+Tricolored_Bumble_Bee,Tricolored Bumble Bee,Bombus ternarius,Canada,CA
+Tricolored_Bumble_Bee,Tricolored Bumble Bee,Bombus ternarius,United States,US
+Two-spotted_Bumble_Bee,Two-spotted Bumble Bee,Bombus bimaculatus,United States,US
+Two-spotted_Bumble_Bee,Two-spotted Bumble Bee,Bombus bimaculatus,Canada,CA
+Van_Dyke's_Bumble_Bee,Van Dyke's Bumble Bee,Bombus vandykei,United States,US
+Van_Dyke's_Bumble_Bee,Van Dyke's Bumble Bee,Bombus vandykei,Canada,CA
+Vancouver_Bumble_Bee,Vancouver Bumble Bee,Bombus vancouverensis,United States,US
+Vancouver_Bumble_Bee,Vancouver Bumble Bee,Bombus vancouverensis,Canada,CA
+Vancouver_Island_Bumble_Bee,Vancouver Island Bumble Bee,Bombus vancouverensis vancouverensis,United States,US
+Vancouver_Island_Bumble_Bee,Vancouver Island Bumble Bee,Bombus vancouverensis vancouverensis,Canada,CA
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,United Kingdom,GB
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,Czechia,CZ
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,Germany,DE
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,Ukraine,UA
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,Portugal,PT
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,Hungary,HU
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,Lithuania,LT
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,Austria,AT
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,Poland,PL
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,France,FR
+Vestal_Cuckoo_Bumble_bee,Vestal Cuckoo Bumble bee,Bombus vestalis,Russian Federation,RU
+Western_Bumble_Bee,Western Bumble Bee,Bombus occidentalis,Canada,CA
+Western_Bumble_Bee,Western Bumble Bee,Bombus occidentalis,United States,US
+White-shouldered_Bumble_Bee,White-shouldered Bumble Bee,Bombus appositus,United States,US
+White-shouldered_Bumble_Bee,White-shouldered Bumble Bee,Bombus appositus,Canada,CA
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Romania,RO
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Kazakhstan,KZ
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Switzerland,CH
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Austria,AT
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Sweden,SE
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Czechia,CZ
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Norway,NO
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,United Kingdom,GB
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Belarus,BY
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Latvia,LV
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Finland,FI
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Denmark,DK
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Ukraine,UA
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Croatia,HR
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Netherlands,NL
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Russian Federation,RU
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Germany,DE
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Poland,PL
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,France,FR
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Iceland,IS
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Spain,ES
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Belgium,BE
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Ireland,IE
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Luxembourg,LU
+White-tailed_Bumble_Bee,White-tailed Bumble Bee,Bombus lucorum,Italy,IT
+Wurflen's_Bumble_Bee,Wurflen's Bumble Bee,Bombus mastrucatus,Germany,DE
+Wurflen's_Bumble_Bee,Wurflen's Bumble Bee,Bombus mastrucatus,Italy,IT
+Wurflen's_Bumble_Bee,Wurflen's Bumble Bee,Bombus mastrucatus,Romania,RO
+Wurflen's_Bumble_Bee,Wurflen's Bumble Bee,Bombus mastrucatus,Austria,AT
+Wurflen's_Bumble_Bee,Wurflen's Bumble Bee,Bombus mastrucatus,Slovenia,SI
+Yellow-banded_Bumble_Bee,Yellow-banded Bumble Bee,Bombus terricola,United States,US
+Yellow-banded_Bumble_Bee,Yellow-banded Bumble Bee,Bombus terricola,Canada,CA
+Yellow-faced_Bumble_Bee,Yellow-faced Bumble Bee,Bombus vosnesenskii,United States,US
+Yellow-faced_Bumble_Bee,Yellow-faced Bumble Bee,Bombus vosnesenskii,Canada,CA
+Yellow-fronted_Bumble_Bee,Yellow-fronted Bumble Bee,Bombus flavifrons,United States,US
+Yellow-fronted_Bumble_Bee,Yellow-fronted Bumble Bee,Bombus flavifrons,Canada,CA
+Yellowish_Cuckoo_Bumble_bee,Yellowish Cuckoo Bumble bee,Bombus flavidus,United States,US
+Yellowish_Cuckoo_Bumble_bee,Yellowish Cuckoo Bumble bee,Bombus flavidus,Finland,FI
+Yellowish_Cuckoo_Bumble_bee,Yellowish Cuckoo Bumble bee,Bombus flavidus,Canada,CA
+frigid_bumble_bee,frigid bumble bee,Bombus frigidus,United States,US
+frigid_bumble_bee,frigid bumble bee,Bombus frigidus,Canada,CA
+,,Bombus,Romania,RO
+,,Bombus,Germany,DE
+,,Bombus,United Kingdom,GB
+,,Bombus pascuorum floralis,Germany,DE
+,,Bombus robustus,Ecuador,EC
+,,Bombus,Russian Federation,RU
+,,Bombus,Kazakhstan,KZ
+,,Bombus,Czechia,CZ
+,,Bombus,Austria,AT
+,,Bombus confusus paradoxus,Russian Federation,RU
+,,Bombus,Sweden,SE
+,,Bombus flavidus flavidus,United States,US
+,,Bombus,Belgium,BE
+,,Bombus,Kyrgyzstan,KG
+,,Bombus,Poland,PL
+,,Bombus,France,FR
+,,Bombus soroeensis proteus,France,FR
+,,Bombus zonatus,Ukraine,UA
+,,Bombus,Serbia,RS
+,,Bombus,Denmark,DK
+,,Bombus,Italy,IT
+,,Bombus,Luxembourg,LU
+,,Bombus schrencki schrencki,Russian Federation,RU
+,,Bombus terrestris lusitanicus,Portugal,PT
+,,Bombus,Mongolia,MN
+,,Bombus flavidus flavidus,Canada,CA
+,,Bombus terrestris africanus,Algeria,DZ
+,,Bombus,Norway,NO
+,,Bombus,Portugal,PT
+,,Bombus ardens ardens,Japan,JP
+,,Bombus terrestris terrestris,Poland,PL
+,,Bombus modestus,Russian Federation,RU
+,,Bombus vagans vagans,Canada,CA
+,,Bombus,Netherlands,NL
+,,Bombus deuteronymus,Russian Federation,RU
+,,Bombus mucidus,Austria,AT
+,,Bombus alpinus helleri,Austria,AT
+,,Bombus pascuorum maculatus,Spain,ES
+,,Bombus,Switzerland,CH
+,,Bombus fervidus fervidus,United States,US
+,,Bombus pyrrhopygus,Sweden,SE
