@@ -26,7 +26,7 @@ SPECIES_IMG = {
 
 # ********** COUNTRIES CSV **********
 ROOT = Path(__file__).resolve().parents[1]
-CSV_PATH = ROOT / "data" / "bees_with_countries.csv"
+CSV_PATH = ROOT / "data" / "bees_with_countries_raw.csv"
 
 @st.cache_data
 def load_csv(path):
