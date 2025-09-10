@@ -4,7 +4,6 @@ from pathlib import Path
 import streamlit as st
 import pandas as pd
 import pydeck as pdk
-import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="World Map", layout="wide")
 st.title("Bumble Bee Observations")
@@ -24,6 +23,22 @@ SPECIES_IMG = {
     "Red-belted Bumble Bee": "https://commons.wikimedia.org/wiki/Special:FilePath/Bombus%20rufocinctus.jpg",
     "Half-black Bumble Bee": "https://commons.wikimedia.org/wiki/Special:FilePath/Bombus%20vagans%2010699048.jpg",
 }
+
+# ********** DOT COLOURS **********
+COLOR_LIST = [
+    [230, 25, 75],   # red
+    [60, 180, 75],   # green
+    [255, 225, 25],  # yellow
+    [0, 130, 200],   # blue
+    [245, 130, 48],  # orange
+    [145, 30, 180],  # purple
+    [70, 240, 240],  # cyan
+    [240, 50, 230],  # magenta
+    [210, 245, 60],  # lime
+    [250, 190, 190], # pink
+    [0, 128, 128],   # teal
+    [128, 128, 0],   # olive
+]
 
 # ********** COUNTRIES CSV **********
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,8 +75,8 @@ if df.empty:
     st.stop()
 
 # ********** MAP **********
-cmap = plt.get_cmap("tab20", len(keep))
-color_map = {sp: [int(255*c) for c in cmap(i)[:3]] + [220] for i, sp in enumerate(keep)}
+color_map = {sp: COLOR_LIST[i % len(COLOR_LIST)] + [220]  # add alpha
+             for i, sp in enumerate(keep)}
 df["color"] = df[name_col].map(color_map)
 
 view_state = pdk.ViewState(
