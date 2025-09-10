@@ -1,5 +1,7 @@
 import os
+import base64
 import streamlit as st
+from pathlib import Path
 from PIL import Image
 import requests
 import pycountry
@@ -7,15 +9,75 @@ import pycountry
 # API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
 API_URL = "http://localhost:8000"
 
+# Hide header
+st.markdown(
+    """
+    <style>
+    header {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Sidebar
+st.markdown(
+    """
+    <style>
+    /* Sidebar background */
+    section[data-testid="stSidebar"] {
+        background-color: black;
+    }
+
+    /* Sidebar text */
+    section[data-testid="stSidebar"] * {
+        color: white !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Background image
+BG_PATH = Path("assets/0005.jpg")
+def get_base64(file_path):
+    return base64.b64encode(open(file_path, "rb").read()).decode()
+
+if BG_PATH.exists():
+    b64 = get_base64(BG_PATH)
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.8)),
+                        url("data:image/png;base64,{b64}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }}
+
+        /* keep widgets flat (no extra boxes) */
+        [data-testid="stFileUploader"] [data-testid="stFileUploadDropzone"],
+        [data-testid="stFileUploader"] > div:first-child {{
+            background: transparent !important;
+            border: 1px dashed #aaa !important;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+
 st.set_page_config(page_title="Detect a Bee", layout="wide")
 
 # st.title("BeeTector")
 
-st.markdown("""
-            <div style="text-align:center;">
-              <img src="assets/logofinal.png" width="content">
-            </div>
-            """, unsafe_allow_html=True)
+ROOT = Path(__file__).resolve().parent
+IMG = ROOT / "assets" / "logohd.png"
+
+st.image(str(IMG), width=300)
+
+
+st.markdown('<div class="bee-sentinel"></div>', unsafe_allow_html=True)
 
 country_codes = [c.alpha_2 for c in pycountry.countries]
 selected_country = st.selectbox("Select a country (optional)", [""] + country_codes)
