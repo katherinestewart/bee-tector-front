@@ -4,8 +4,8 @@ from PIL import Image
 import requests
 import pycountry
 
-# API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
-API_URL = "http://localhost:8000"
+API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
+# API_URL = "http://localhost:8000"
 st.title("BeeTector")
 
 country_codes = [c.alpha_2 for c in pycountry.countries]
