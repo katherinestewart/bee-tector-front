@@ -69,7 +69,11 @@ layer = pdk.Layer(
     "ScatterplotLayer",
     data=df,
     get_position="[lon, lat]",
-    get_radius=80000,
+    get_fill_color=[255, 140, 0, 200],
+    get_line_color=[255, 255, 255, 220],
+    stroked=True,
+    line_width_min_pixels=1,
+    get_radius=90000,
     pickable=True,
 )
 
@@ -78,7 +82,17 @@ tooltip = {
     "style": {"backgroundColor": "white", "color": "black"},
 }
 
-deck = pdk.Deck(layers=[layer], initial_view_state=view_state, tooltip=tooltip)
+deck = pdk.Deck(
+    layers=[layer],
+    initial_view_state=view_state,
+    map_provider="carto",
+    map_style="light",
+    tooltip={
+        "html": "<b>{common_name}</b><br/><img src='{img_url}' width='180'/>",
+        "style": {"backgroundColor": "white", "color": "black"},
+    },
+)
+
 st.pydeck_chart(deck)
 
 st.caption("Images from Wikimedia Commons; check file pages for licenses.")
