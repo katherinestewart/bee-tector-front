@@ -1,12 +1,42 @@
 # pages/World_Map.py
 from pathlib import Path
-
-import streamlit as st
+import base64
 import pandas as pd
 import pydeck as pdk
 
-st.set_page_config(page_title="World Map", layout="wide")
+import streamlit as st
+from pathlib import Path
+from utils.ui import apply_global_css
+
+st.set_page_config(page_title="Detect a Bee", layout="wide", initial_sidebar_state="expanded")
+
+BG = Path.cwd() / "assets" / "0005.jpg"
+apply_global_css(BG)
+
+
 st.title("Bumble Bee Observations")
+
+# Map styling
+st.markdown("""
+<style>
+div[data-testid="stDeckGlJsonChart"] {
+    border: 1px solid rgba(0,0,0,0.30);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+/* if you want a stronger look, uncomment:
+div[data-testid="stDeckGlJsonChart"] {
+    border: 3px solid rgba(0,0,0,0.55);
+    border-radius: 12px;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+}
+*/
+</style>
+""", unsafe_allow_html=True)
+
 
 # ********** MAP 1 **********
 st.subheader("Observations of the 12 subspecies this app can detect")
@@ -117,7 +147,10 @@ deck = pdk.Deck(
     },
 )
 
-st.pydeck_chart(deck)
+map1 = st.container()
+with map1:
+    st.markdown('<span class="map-sentinel"></span>', unsafe_allow_html=True)  # direct child
+    st.pydeck_chart(deck)
 
 st.caption("Images from Wikimedia Commons; check file pages for licenses.")
 
@@ -161,4 +194,7 @@ deck2 = pdk.Deck(
     },
 )
 
-st.pydeck_chart(deck2)
+map2 = st.container()
+with map2:
+    st.markdown('<span class="map-sentinel"></span>', unsafe_allow_html=True)  # direct child
+    st.pydeck_chart(deck2)
