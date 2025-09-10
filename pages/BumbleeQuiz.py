@@ -4,7 +4,6 @@ from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 import random
 
-
 QUESTIONS = [
     {"q": "Bumble bees belong to which genus?", "options": ["Bombus", "Apis", "Vespa", "Melipona"], "answer": "Bombus"},
     {"q": "Bumble bees are important for:", "options": ["Pollinating many flowers and crops", "Only making honey", "Eating other insects", "Building dams"], "answer": "Pollinating many flowers and crops"},
@@ -25,6 +24,7 @@ QUESTIONS = [
 
 TOTAL = len(QUESTIONS)
 
+
 def _init_state():
     if "bumbleeq_index" not in st.session_state:
         st.session_state.bumbleeq_index = 0
@@ -40,7 +40,6 @@ def _init_state():
         st.session_state.bumbleeq_name = ""
     if "bumbleeq_confetti_shown" not in st.session_state:
         st.session_state.bumbleeq_confetti_shown = False
-
     if "bumbleeq_shuffled_opts" not in st.session_state:
         st.session_state.bumbleeq_shuffled_opts = None
 
@@ -48,60 +47,43 @@ _init_state()
 
 
 def init_shuffled_options(force=False):
-    """
-    Populate st.session_state.bumbleeq_shuffled_opts with a list of option lists,
-    each one a shuffled version of the question's options (ensuring the correct answer is present).
-    If force=True, regenerate even if already present.
-    """
     if st.session_state.bumbleeq_shuffled_opts is not None and not force:
         return
     shuffled = []
     for q in QUESTIONS:
         ans = q["answer"]
         opts = list(q.get("options", []))
-
         if ans not in opts:
             opts.append(ans)
-
         unique_opts = []
         for o in opts:
             if o not in unique_opts:
                 unique_opts.append(o)
-
         if len(unique_opts) > 4:
             unique_opts = unique_opts[:4]
-
         random.shuffle(unique_opts)
-
         if ans not in unique_opts:
-
             replace_idx = random.randrange(len(unique_opts))
             unique_opts[replace_idx] = ans
         shuffled.append(unique_opts)
     st.session_state.bumbleeq_shuffled_opts = shuffled
 
-
 init_shuffled_options(force=False)
+
 
 def measure_text(draw: ImageDraw.Draw, text: str, font: ImageFont.ImageFont):
     try:
         bbox = draw.textbbox((0, 0), text, font=font)
-        w = bbox[2] - bbox[0]
-        h = bbox[3] - bbox[1]
-        return (w, h)
+        return bbox[2] - bbox[0], bbox[3] - bbox[1]
     except Exception:
-        pass
-    try:
-        return draw.textsize(text, font=font)
-    except Exception:
-        pass
-    try:
-        return font.getsize(text)
-    except Exception:
-        pass
-    mask = font.getmask(text)
-    return mask.size
-
+        try:
+            return draw.textsize(text, font=font)
+        except Exception:
+            try:
+                return font.getsize(text)
+            except Exception:
+                mask = font.getmask(text)
+                return mask.size
 
 def _show_confetti():
     html = """
@@ -127,6 +109,66 @@ def _show_confetti():
     """
     st.components.v1.html(html, height=150, scrolling=False)
 
+
+def generate_certificate(name: str) -> bytes:
+    W, H = 1200, 800
+    img = Image.new("RGB", (W, H), color=("orange"))
+    draw = ImageDraw.Draw(img)
+
+
+    try:
+        font_title = ImageFont.truetype("DejaVuSans-Bold.ttf", 50)
+        font_body = ImageFont.truetype("DejaVuSans.ttf", 40)
+        font_name = ImageFont.truetype("DejaVuSans-Bold.ttf", 80)
+        font_date = ImageFont.truetype("DejaVuSans.ttf", 28)
+        font_desc = ImageFont.truetype("DejaVuSans-Bold.ttf", 30)
+    except Exception:
+        font_title = ImageFont.load_default()
+        font_body = ImageFont.load_default()
+        font_name = ImageFont.load_default()
+        font_date = ImageFont.load_default()
+        font_desc = ImageFont.load_default()
+
+
+    title_text = "BumbleeQuiz Certificate of Completion"
+    w_title, h_title = measure_text(draw, title_text, font_title)
+    draw.text(((W - w_title) / 2, 140), title_text, fill="#7B3F00", font=font_title)
+
+
+    subtitle = "This certifies that"
+    w_sub, h_sub = measure_text(draw, subtitle, font_desc)
+    draw.text(((W - w_sub) / 2, 230), subtitle, fill="#5D4037", font=font_desc)
+
+
+    w_name, h_name = measure_text(draw, name, font_name)
+    draw.text(((W - w_name) / 2, 360), name, fill="#814E00", font=font_name)
+
+
+    footer = f"Is an official BeeTector"
+    w_foot, h_foot = measure_text(draw, footer, font_body)
+    draw.text(((W - w_foot) / 2, 520), footer, fill="#5D4037", font=font_body)
+
+
+    date_text = datetime.now().strftime("%B %d, %Y")
+    w_date, h_date = measure_text(draw, date_text, font_date)
+    draw.text(((W - w_date) / 2, 610), date_text, fill="#5D4037", font=font_date)
+
+
+    border_thickness = 12
+    for i in range(border_thickness):
+        draw.rectangle([i, i, W - i - 1, H - i - 1], outline="#FBB040")
+
+
+    for x, y in [(80, 80), (W-120, 80), (80, H-120), (W-120, H-120)]:
+        draw.ellipse([x, y, x+40, y+40], fill="#FBB040", outline="#7B3F00")
+
+
+    buf = BytesIO()
+    img.save(buf, format="JPEG", quality=95)
+    buf.seek(0)
+    return buf.getvalue()
+
+
 st.title("BumbleeQuiz — Easy Bumble Bee Quiz")
 st.write("Click an answer to select it. Any mistake resets your progress to 0 and restarts the quiz.")
 
@@ -136,13 +178,11 @@ st.write(f"Score: **{st.session_state.bumbleeq_score}** / {TOTAL}")
 
 if st.session_state.bumbleeq_reset_msg:
     st.warning(st.session_state.bumbleeq_reset_msg)
-
     st.session_state.bumbleeq_reset_msg = ""
 
 
 if st.session_state.bumbleeq_score >= TOTAL or st.session_state.bumbleeq_finished:
     st.session_state.bumbleeq_finished = True
-
 
     if not st.session_state.bumbleeq_confetti_shown:
         try:
@@ -160,50 +200,7 @@ if st.session_state.bumbleeq_score >= TOTAL or st.session_state.bumbleeq_finishe
             st.error("Name cannot be empty.")
         else:
             st.session_state.bumbleeq_name = name.strip()
-
-            W, H = 1200, 800
-            img = Image.new("RGB", (W, H), color=(245, 245, 220))
-            draw = ImageDraw.Draw(img)
-            try:
-                font_title = ImageFont.truetype("DejaVuSans-Bold.ttf", 56)
-                font_body = ImageFont.truetype("DejaVuSans.ttf", 36)
-                font_name = ImageFont.truetype("DejaVuSans-Bold.ttf", 64)
-            except Exception:
-                font_title = ImageFont.load_default()
-                font_body = ImageFont.load_default()
-                font_name = ImageFont.load_default()
-
-            title_text = "BumbleeQuiz Certificate of Completion"
-            subtitle = "This certifies that"
-            name_text = st.session_state.bumbleeq_name
-            footer = f"Has successfully completed the BumbleeQuiz — {TOTAL}/{TOTAL} correct"
-            date_text = datetime.now().strftime("%B %d, %Y")
-
-            w_title, h_title = measure_text(draw, title_text, font_title)
-            draw.text(((W - w_title) / 2, 120), title_text, fill="black", font=font_title)
-
-            w_sub, h_sub = measure_text(draw, subtitle, font_body)
-            draw.text(((W - w_sub) / 2, 220), subtitle, fill="black", font=font_body)
-
-            w_name, h_name = measure_text(draw, name_text, font_name)
-            draw.text(((W - w_name) / 2, 300), name_text, fill="darkblue", font=font_name)
-
-            w_foot, h_foot = measure_text(draw, footer, font_body)
-            draw.text(((W - w_foot) / 2, 420), footer, fill="black", font=font_body)
-
-            w_date, h_date = measure_text(draw, date_text, font_body)
-            draw.text(((W - w_date) / 2, 540), date_text, fill="black", font=font_body)
-
-
-            border_thickness = 8
-            for i in range(border_thickness):
-                draw.rectangle([i, i, W - i - 1, H - i - 1], outline="black")
-
-            buf = BytesIO()
-            img.save(buf, format="JPEG", quality=95)
-            buf.seek(0)
-            st.session_state.bumbleeq_cert_bytes = buf.getvalue()
-
+            st.session_state.bumbleeq_cert_bytes = generate_certificate(name.strip())
 
     if st.session_state.bumbleeq_cert_bytes:
         st.success("Certificate generated.")
@@ -215,7 +212,6 @@ if st.session_state.bumbleeq_score >= TOTAL or st.session_state.bumbleeq_finishe
             mime="image/jpeg",
         )
 
-
     if st.button("Restart Quiz"):
         st.session_state.bumbleeq_index = 0
         st.session_state.bumbleeq_score = 0
@@ -223,7 +219,6 @@ if st.session_state.bumbleeq_score >= TOTAL or st.session_state.bumbleeq_finishe
         st.session_state.bumbleeq_cert_bytes = None
         st.session_state.bumbleeq_name = ""
         st.session_state.bumbleeq_confetti_shown = False
-
         init_shuffled_options(force=True)
 
 
@@ -238,7 +233,6 @@ else:
 
     q_obj = QUESTIONS[idx]
     opts = st.session_state.bumbleeq_shuffled_opts[idx]
-
     if not opts or not isinstance(opts, list):
         opts = list(q_obj.get("options", []))
         random.shuffle(opts)
@@ -247,19 +241,15 @@ else:
     st.subheader(f"Question {idx + 1} of {TOTAL}")
     st.write(q_obj["q"])
 
-
     for i, opt in enumerate(opts):
         key = f"bumbleeq_opt_{idx}_{i}"
         if st.button(opt, key=key):
-
             if opt == q_obj["answer"]:
-
                 st.session_state.bumbleeq_score += 1
                 st.session_state.bumbleeq_index += 1
                 if st.session_state.bumbleeq_score >= TOTAL:
                     st.session_state.bumbleeq_finished = True
             else:
-
                 st.session_state.bumbleeq_score = 0
                 st.session_state.bumbleeq_index = 0
                 st.session_state.bumbleeq_reset_msg = "Incorrect answer — progress reset to 0. Quiz restarted."
