@@ -8,6 +8,9 @@ import pydeck as pdk
 st.set_page_config(page_title="World Map", layout="wide")
 st.title("Bumble Bee Observations")
 
+# ********** MAP 1 **********
+st.subheader("Observations of the 12 subspecies this app can detect")
+
 # ********** IMAGE URLS **********
 SPECIES_IMG = {
     "Common Eastern Bumble Bee": "https://commons.wikimedia.org/wiki/Special:FilePath/Bombus%20impatiens.jpg",
@@ -117,3 +120,43 @@ deck = pdk.Deck(
 st.pydeck_chart(deck)
 
 st.caption("Images from Wikimedia Commons; check file pages for licenses.")
+
+# ********** MAP 2 **********
+st.subheader("All Observations")
+
+df_all = load_csv(CSV_PATH)
+df_all[lat_col] = pd.to_numeric(df_all[lat_col], errors="coerce")
+df_all[lon_col] = pd.to_numeric(df_all[lon_col], errors="coerce")
+df2 = df_all.dropna(subset=[lat_col, lon_col]).copy()
+
+view_state2 = pdk.ViewState(
+    latitude=float(df2[lat_col].mean()),
+    longitude=float(df2[lon_col].mean()),
+    zoom=2,
+)
+
+layer2 = pdk.Layer(
+    "ScatterplotLayer",
+    data=df2,
+    get_position=[lon_col, lat_col],
+    get_fill_color=[0, 0, 0, 220],
+    get_line_color=[255, 255, 255, 230],
+    stroked=True,
+    line_width_min_pixels=1,
+    get_radius=5,
+    radius_units="pixels",
+    pickable=True,
+)
+
+deck2 = pdk.Deck(
+    layers=[layer2],
+    initial_view_state=view_state2,
+    map_provider="carto",
+    map_style="light",
+    tooltip={
+        "html": f"<b>{{{name_col}}}</b>",
+        "style": {"backgroundColor": "white", "color": "black"},
+    },
+)
+
+st.pydeck_chart(deck2)
