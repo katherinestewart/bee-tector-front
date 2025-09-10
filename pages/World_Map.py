@@ -4,6 +4,7 @@ from pathlib import Path
 import streamlit as st
 import pandas as pd
 import pydeck as pdk
+import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="World Map", layout="wide")
 st.title("Bumble Bee Observations")
@@ -59,6 +60,10 @@ if df.empty:
     st.stop()
 
 # ********** MAP **********
+cmap = plt.get_cmap("tab20", len(keep))
+color_map = {sp: [int(255*c) for c in cmap(i)[:3]] + [220] for i, sp in enumerate(keep)}
+df["color"] = df[name_col].map(color_map)
+
 view_state = pdk.ViewState(
     latitude=float(df["lat"].mean()),
     longitude=float(df["lon"].mean()),
