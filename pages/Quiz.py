@@ -1,25 +1,34 @@
-import streamlit as st
 from io import BytesIO
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 import random
 
+import streamlit as st
+from pathlib import Path
+from utils.ui import apply_global_css
+
+st.set_page_config(page_title="Detect a Bee", layout="wide", initial_sidebar_state="expanded")
+
+BG = Path.cwd() / "assets" / "0005.jpg"
+apply_global_css(BG)
+
+
 QUESTIONS = [
-    {"q": "Bumble bees belong to which genus?", "options": ["Bombus", "Apis", "Vespa", "Melipona"], "answer": "Bombus"},
-    {"q": "Bumble bees are important for:", "options": ["Pollinating many flowers and crops", "Only making honey", "Eating other insects", "Building dams"], "answer": "Pollinating many flowers and crops"},
-    {"q": "Why do bumble bees look 'fuzzy'?", "options": ["They have lots of hairs (setae) on their bodies", "They wear pollen coats", "They have scales like butterflies", "They carry feathers"], "answer": "They have lots of hairs (setae) on their bodies"},
-    {"q": "Which two colors are most commonly seen on bumble bees?", "options": ["Yellow and black", "Blue and green", "Red and purple", "Pink and white"], "answer": "Yellow and black"},
-    {"q": "Approximately how many bumble bee species exist?", "options": ["More than 250", "About 20", "Over 2000", "Fewer than 10"], "answer": "More than 250"},
-    {"q": "What does a queen bumble bee usually do in spring?", "options": ["Wake and start a new nest (found a colony)", "Collect honey for winter", "Migrate to Africa", "Spin silk webs"], "answer": "Wake and start a new nest (found a colony)"},
-    {"q": "Can bumble bees sting?", "options": ["Yes — they can sting, but are generally not aggressive", "No — they never sting", "Only males can sting", "They sting only underwater"], "answer": "Yes — they can sting, but are generally not aggressive"},
-    {"q": "How can bumble bees fly in cool weather?", "options": ["They make heat by vibrating flight muscles (thermoregulation)", "They use solar wings", "They store hot nectar", "They only fly at night"], "answer": "They make heat by vibrating flight muscles (thermoregulation)"},
-    {"q": "Which castes are found in a social bumble bee colony?", "options": ["Queens, workers, and males", "Only queens", "Only workers", "Only males"], "answer": "Queens, workers, and males"},
-    {"q": "Bumble bees are members of which family?", "options": ["Apidae", "Vespidae", "Formicidae", "Noctuidae"], "answer": "Apidae"},
-    {"q": "Bumble bees collect what from flowers?", "options": ["Nectar and pollen", "Leaves and twigs", "Stone and sand", "Fish"], "answer": "Nectar and pollen"},
-    {"q": "Which crop benefits from ‘buzz pollination’ by bumble bees?", "options": ["Tomatoes", "Wheat", "Soybeans", "Rice"], "answer": "Tomatoes"},
-    {"q": "Where are bumble bee nests often found?", "options": ["In holes in the ground or old rodent nests", "High on cliff faces", "Floating on water", "Inside human refrigerators"], "answer": "In holes in the ground or old rodent nests"},
-    {"q": "Do bumble bees store large amounts of honey like honey bees?", "options": ["No — they store only small food reserves", "Yes — they build huge honey stores", "They store only pollen, never nectar", "They make syrup instead"], "answer": "No — they store only small food reserves"},
-    {"q": "What special pollination method do bumble bees use to release pollen from some flowers?", "options": ["Buzz pollination (sonication)", "Carrying the whole flower", "Using their feet to comb pollen", "Digging under the flower"], "answer": "Buzz pollination (sonication)"},
+    {"q": "Bumblebees belong to which genus?", "options": ["Bombus", "Apis", "Vespa", "Melipona"], "answer": "Bombus"},
+    {"q": "Bumblebees are important for:", "options": ["Pollinating many flowers and crops", "Only making honey", "Eating other insects", "Building dams"], "answer": "Pollinating many flowers and crops"},
+    {"q": "Why do bumblebees look 'fuzzy'?", "options": ["They have lots of hairs (setae) on their bodies", "They wear pollen coats", "They have scales like butterflies", "They carry feathers"], "answer": "They have lots of hairs (setae) on their bodies"},
+    {"q": "Which two colors are most commonly seen on bumblebees?", "options": ["Yellow and black", "Blue and green", "Red and purple", "Pink and white"], "answer": "Yellow and black"},
+    {"q": "Approximately how many bumblebee subspecies exist?", "options": ["More than 250", "About 20", "Over 2000", "Fewer than 10"], "answer": "More than 250"},
+    {"q": "What does a queen bumblebee usually do in spring?", "options": ["Wake and start a new nest (found a colony)", "Collect honey for winter", "Migrate to Africa", "Spin silk webs"], "answer": "Wake and start a new nest (found a colony)"},
+    {"q": "Can bumblebees sting?", "options": ["Yes — they can sting, but are generally not aggressive", "No — they never sting", "Only males can sting", "They sting only underwater"], "answer": "Yes — they can sting, but are generally not aggressive"},
+    {"q": "How can bumblebees fly in cool weather?", "options": ["They make heat by vibrating flight muscles (thermoregulation)", "They use solar wings", "They store hot nectar", "They only fly at night"], "answer": "They make heat by vibrating flight muscles (thermoregulation)"},
+    {"q": "Which castes are found in a social bumblebee colony?", "options": ["Queens, workers, and males", "Only queens", "Only workers", "Only males"], "answer": "Queens, workers, and males"},
+    {"q": "Bumblebees are members of which family?", "options": ["Apidae", "Vespidae", "Formicidae", "Noctuidae"], "answer": "Apidae"},
+    {"q": "Bumblebees collect what from flowers?", "options": ["Nectar and pollen", "Leaves and twigs", "Stone and sand", "Fish"], "answer": "Nectar and pollen"},
+    {"q": "Which crop benefits from ‘buzz pollination’ by bumblebees?", "options": ["Tomatoes", "Wheat", "Soybeans", "Rice"], "answer": "Tomatoes"},
+    {"q": "Where are bumblebee nests often found?", "options": ["In holes in the ground or old rodent nests", "High on cliff faces", "Floating on water", "Inside human refrigerators"], "answer": "In holes in the ground or old rodent nests"},
+    {"q": "Do bumblebees store large amounts of honey like honeybees?", "options": ["No — they store only small food reserves", "Yes — they build huge honey stores", "They store only pollen, never nectar", "They make syrup instead"], "answer": "No — they store only small food reserves"},
+    {"q": "What special pollination method do bumblebees use to release pollen from some flowers?", "options": ["Buzz pollination (sonication)", "Carrying the whole flower", "Using their feet to comb pollen", "Digging under the flower"], "answer": "Buzz pollination (sonication)"},
 ]
 
 TOTAL = len(QUESTIONS)
