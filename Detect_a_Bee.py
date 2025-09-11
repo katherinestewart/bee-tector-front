@@ -8,8 +8,8 @@ from pathlib import Path
 import pycountry
 from utils.ui import apply_global_css
 
-#API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
-API_URL = "http://localhost:8000"
+API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
+# API_URL = "http://localhost:8000"
 
 st.set_page_config(page_title="Detect a Bee", layout="wide", initial_sidebar_state="expanded")
 
