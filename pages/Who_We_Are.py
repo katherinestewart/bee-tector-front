@@ -30,10 +30,9 @@ st.markdown(f"""
      alt="Emanuele Torrisi"
      style="width:100px; height:auto; border-radius:8px; margin: 10px auto; display:block;">
     <span style="font-size: 24px; color: black;">
-    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-    blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-    Let's talk!
+    I am a self-taught programmer with a background in 3D animation. Recently, I completed the
+    Le Wagon Data Science & AI bootcamp, gaining skills in Python, SQL, machine learning, deep
+    learning, and data visualization.
     <div style="text-align: center; margin-top: 10px;">
         <a href="https://www.linkedin.com/in/emanuele-torrisi-08a3572a4" target="_blank" style="text-decoration:none;">
             <img src="data:image/png;base64,{lk_b64}" width="28" alt="LinkedIn"
@@ -79,10 +78,16 @@ st.markdown(f"""
      alt="Rohan Raghava Poojary"
      style="width:100px; height:auto; border-radius:8px; margin: 10px auto; display:block;">
     <span style="font-size: 24px; color: black;">
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+        A theoretical physicist with 10+ years' research experience Rohan has recently caught the
+        AI bug and is super excited about how different neural architectures learn specific tasks.
+        In his spare time he tries to predict solar wind patterns from IPS data using transformers.
+        He has joined the Le Wagon bootcamp for honing industry specific skills and is actively
+        looking for data science roles.
         <div style="text-align: center; margin-top: 10px;">
+            <a href="https://linkedin.com/in/rohan-r-poojary-b09a25251" target="_blank" style="text-decoration:none;">
+                <img src="data:image/png;base64,{lk_b64}" width="28" alt="LinkedIn"
+                    style="margin-right:10px;" />
+            </a>
             <a href="https://github.com/roninrp" target="_blank" style="text-decoration:none;">
                 <img src="data:image/png;base64,{gh_b64}" width="28" alt="GitHub" />
             </a>
@@ -98,9 +103,10 @@ st.markdown(f"""
      alt="Thahyra van Heyningen"
      style="width:100px; height:auto; border-radius:8px; margin: 10px auto; display:block;">
     <span style="font-size: 24px; color: black;">
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+        After years in Sales, Thahyra pivoted into Data & AI engineering, where she designs solutions
+        that make organizations more efficient and future-proof. What excites her most is using technology
+        not just as a tool for efficiency, but as a driver of societal impact, bridging people, processes,
+        and data in meaningful ways.
         <div style="text-align: center; margin-top: 10px;">
             <a href="https://www.linkedin.com/in/thahyravh/" target="_blank" style="text-decoration:none;">
                 <img src="data:image/png;base64,{lk_b64}" width="28" alt="LinkedIn"
