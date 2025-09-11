@@ -1,0 +1,5 @@
+[server]
+headless = true
+
+[general]
+entrypoint = "Detect_a_Bee.py"
