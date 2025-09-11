@@ -8,18 +8,29 @@ from pathlib import Path
 import pycountry
 from utils.ui import apply_global_css
 
-API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
-# API_URL = "http://localhost:8000"
+#API_URL = st.secrets.get("API_URL") or os.getenv("API_URL") or "https://imageapi2-646220559180.europe-west1.run.app"
+API_URL = "http://localhost:8000"
 
 st.set_page_config(page_title="Detect a Bee", layout="wide", initial_sidebar_state="expanded")
 
-BG = Path.cwd() / "assets" / "0005.jpg"
+BG = Path.cwd() / "assets" / "darkerhex.jpg"
 apply_global_css(BG)
 
 ROOT = Path(__file__).resolve().parent
 IMG = ROOT / "assets" / "logohd.png"
 
 st.image(str(IMG), width=300)
+
+st.markdown(
+    """
+    <div style="font-size:20px; line-height:1.6; margin-bottom:40px;">
+        Welcome to <b>BeeTector</b> - an AI-powered tool for identifying <b>bumblebee</b> subspecies from photos.
+        Simply upload an image, and the app will predict the subspecies if it is one of the twelve our model was trained to detect.
+        <br><br>For more detailed and accurate feedback, please enter the location the photo was taken.
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 
 def prettify_name(name: str) -> str:
