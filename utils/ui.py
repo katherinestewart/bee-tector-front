@@ -5,7 +5,7 @@ import streamlit as st
 def _b64(path):
     return base64.b64encode(path.read_bytes()).decode()
 
-def apply_global_css(bg_path: Path | None = None):
+def apply_global_css(bg_path):
     """Inject global CSS (header/sidebar + optional background image)."""
     css = [
         "<style>",
@@ -24,7 +24,7 @@ def apply_global_css(bg_path: Path | None = None):
         b64 = _b64(bg_path)
         css += [
             ".stApp {",
-            f'  background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url("data:{mime};base64,{b64}");',
+            f'  background: url("data:{mime};base64,{b64}");',
             "  background-size: cover;",
             "  background-position: center;",
             "  background-repeat: no-repeat;",
