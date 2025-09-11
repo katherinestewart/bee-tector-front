@@ -9,7 +9,7 @@ from utils.ui import apply_global_css
 
 st.set_page_config(page_title="Detect a Bee", layout="wide", initial_sidebar_state="expanded")
 
-BG = Path.cwd() / "assets" / "0005.jpg"
+BG = Path.cwd() / "assets" / "darkerhex.jpg"
 apply_global_css(BG)
 
 
