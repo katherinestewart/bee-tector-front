@@ -178,7 +178,7 @@ if st.button("Detect this bee") and img_file:
                     pass
 
                 if country_chosen and context_species:
-                    st.markdown("**Here are some common subspecies in your country:**")
+                    st.markdown("**Here are some subspecies in your country:**")
                     for s in context_species:
 
                         sci_raw = s.get("scientific_name") or s.get("class_name") or ""
@@ -219,7 +219,7 @@ if st.button("Detect this bee") and img_file:
                             s for s in context_species
                             if (s.get("class_name") or "").strip().lower() != matched_lower
                         ]
-                        st.markdown("**Here are some other common subspecies in your country:**")
+                        st.markdown("**Here are some other subspecies in your country:**")
                         if other_species:
                             for s in other_species:
                                 sci_raw = s.get("scientific_name") or s.get("class_name") or ""
@@ -242,7 +242,7 @@ if st.button("Detect this bee") and img_file:
                         pass
 
                 if country_chosen and context_species and not high_conf_and_present:
-                    st.markdown("**Here are some common subspecies in your country:**")
+                    st.markdown("**Here are some subspecies in your country:**")
                     for s in context_species:
                         sci_raw = s.get("scientific_name") or s.get("class_name") or ""
                         commonn = s.get("common_name") or ""
