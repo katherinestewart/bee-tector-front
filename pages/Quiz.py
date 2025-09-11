@@ -9,8 +9,62 @@ from utils.ui import apply_global_css
 
 st.set_page_config(page_title="Detect a Bee", layout="wide", initial_sidebar_state="expanded")
 
-BG = Path.cwd() / "assets" / "darkerhex.jpg"
+BG = Path.cwd() / "assets" / "0005.jpg"
 apply_global_css(BG)
+
+
+
+def show_progress(value: float):
+    """
+    Render a honey-yellow progress bar.
+    Accepts value in range 0.0 - 1.0 (or 0-100); it will normalize appropriately.
+    NOTE: This helper does not print the numeric percent below the bar.
+    """
+    try:
+
+        if value is None:
+            pct = 0
+        else:
+            try:
+                val = float(value)
+                pct = int(val * 100) if val <= 1 else int(val)
+            except Exception:
+                pct = 0
+        if pct < 0:
+            pct = 0
+        if pct > 100:
+            pct = 100
+
+
+        bar_html = f"""
+        <style>
+        .progress-honey {{
+            width: 100%;
+            height: 18px;
+            -webkit-appearance: none;
+            appearance: none;
+            border-radius: 9px;
+            overflow: hidden;
+        }}
+        .progress-honey::-webkit-progress-bar {{
+            background-color: rgba(0,0,0,0.06);
+        }}
+        .progress-honey::-webkit-progress-value {{
+            background: linear-gradient(90deg, #F6C84C 0%, #F3B430 100%);
+        }}
+        .progress-honey::-moz-progress-bar {{
+            background: linear-gradient(90deg, #F6C84C 0%, #F3B430 100%);
+        }}
+        </style>
+        <progress class="progress-honey" value="{pct}" max="100"></progress>
+        """
+        st.markdown(bar_html, unsafe_allow_html=True)
+    except Exception:
+
+        try:
+            st.progress(value)
+        except Exception:
+            pass
 
 
 QUESTIONS = [
@@ -121,7 +175,7 @@ def _show_confetti():
 
 def generate_certificate(name: str) -> bytes:
     W, H = 1200, 800
-    img = Image.new("RGB", (W, H), color=("orange"))
+    img = Image.new("RGB", (W, H), color=("yellow"))
     draw = ImageDraw.Draw(img)
 
 
@@ -141,35 +195,36 @@ def generate_certificate(name: str) -> bytes:
 
     title_text = "BumbleeQuiz Certificate of Completion"
     w_title, h_title = measure_text(draw, title_text, font_title)
-    draw.text(((W - w_title) / 2, 140), title_text, fill="#7B3F00", font=font_title)
+    draw.text(((W - w_title) / 2, 160), title_text, fill="#000000", font=font_title)
 
 
     subtitle = "This certifies that"
     w_sub, h_sub = measure_text(draw, subtitle, font_desc)
-    draw.text(((W - w_sub) / 2, 230), subtitle, fill="#5D4037", font=font_desc)
+    draw.text(((W - w_sub) / 2, 310), subtitle, fill="#5D4037", font=font_desc)
 
 
     w_name, h_name = measure_text(draw, name, font_name)
-    draw.text(((W - w_name) / 2, 360), name, fill="#814E00", font=font_name)
+    draw.text(((W - w_name) / 2, 360), name, fill=
+              "#000000", font=font_name)
 
 
     footer = f"Is an official BeeTector"
     w_foot, h_foot = measure_text(draw, footer, font_body)
-    draw.text(((W - w_foot) / 2, 520), footer, fill="#5D4037", font=font_body)
+    draw.text(((W - w_foot) / 2, 480), footer, fill="#5D4037", font=font_body)
 
 
     date_text = datetime.now().strftime("%B %d, %Y")
     w_date, h_date = measure_text(draw, date_text, font_date)
-    draw.text(((W - w_date) / 2, 610), date_text, fill="#5D4037", font=font_date)
+    draw.text(((W - w_date) / 2, 570), date_text, fill="#5D4037", font=font_date)
 
 
     border_thickness = 12
     for i in range(border_thickness):
-        draw.rectangle([i, i, W - i - 1, H - i - 1], outline="#FBB040")
+        draw.rectangle([i, i, W - i - 1, H - i - 1], outline="#000000")
 
 
     for x, y in [(80, 80), (W-120, 80), (80, H-120), (W-120, H-120)]:
-        draw.ellipse([x, y, x+40, y+40], fill="#FBB040", outline="#7B3F00")
+        draw.ellipse([x, y, x+20, y+20], fill="#000000", outline="#000000")
 
 
     buf = BytesIO()
@@ -182,7 +237,7 @@ st.title("BumbleeQuiz — Easy Bumble Bee Quiz")
 st.write("Click an answer to select it. Any mistake resets your progress to 0 and restarts the quiz.")
 
 progress_value = min(max(st.session_state.bumbleeq_score / TOTAL, 0.0), 1.0)
-st.progress(progress_value)
+show_progress(progress_value)
 st.write(f"Score: **{st.session_state.bumbleeq_score}** / {TOTAL}")
 
 if st.session_state.bumbleeq_reset_msg:
